@@ -17,10 +17,13 @@
         <signal name="XLXN_12" />
         <signal name="XLXN_13" />
         <signal name="RST" />
-        <signal name="XLXN_15" />
         <signal name="Clk" />
+        <signal name="SDA" />
+        <signal name="SCL" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="Clk" />
+        <port polarity="BiDirectional" name="SDA" />
+        <port polarity="BiDirectional" name="SCL" />
         <blockdef name="BlackBox">
             <timestamp>2020-4-16T12:6:28</timestamp>
             <rect width="352" x="64" y="-384" height="384" />
@@ -82,8 +85,8 @@
             <blockpin signalname="XLXN_2" name="Go" />
             <blockpin signalname="XLXN_5(7:0)" name="Address(7:0)" />
             <blockpin signalname="XLXN_6(3:0)" name="ReadCnt(3:0)" />
-            <blockpin name="SDA" />
-            <blockpin name="SCL" />
+            <blockpin signalname="SDA" name="SDA" />
+            <blockpin signalname="SCL" name="SCL" />
             <blockpin signalname="XLXN_4" name="FIFO_Pop" />
             <blockpin signalname="XLXN_3" name="FIFO_Push" />
             <blockpin signalname="XLXN_7(7:0)" name="FIFO_DI(7:0)" />
@@ -173,5 +176,13 @@
             <wire x2="976" y1="960" y2="960" x1="544" />
         </branch>
         <iomarker fontsize="28" x="544" y="672" name="Clk" orien="R270" />
+        <branch name="SDA">
+            <wire x2="2368" y1="656" y2="656" x1="2336" />
+        </branch>
+        <iomarker fontsize="28" x="2368" y="656" name="SDA" orien="R0" />
+        <branch name="SCL">
+            <wire x2="2368" y1="720" y2="720" x1="2336" />
+        </branch>
+        <iomarker fontsize="28" x="2368" y="720" name="SCL" orien="R0" />
     </sheet>
 </drawing>

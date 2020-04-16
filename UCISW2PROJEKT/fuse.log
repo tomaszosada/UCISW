@@ -5,9 +5,9 @@ Turning on mult-threading, number of parallel sub-compilation jobs: 16
 Determining compilation order of HDL files
 Analyzing Verilog file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.vf" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/I2C_Master.vhd" into library work
 Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/BlackBox.vhd" into library work
-Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/../../I2C_Master/I2C_Master.vhd" into library work
-Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/TESTUCISW.vhd" into library work
+Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/DZIALAJPLIS.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling module glbl
@@ -15,11 +15,12 @@ Compiling module i2c_use
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
+Compiling package textio
+Compiling package std_logic_textio
 Compiling package vcomponents
 Compiling package vl_types
 Compiling architecture behavioral of entity BlackBox [blackbox_default]
 Compiling package std_logic_arith
-Compiling package textio
 Compiling package vital_timing
 Compiling package vital_primitives
 Compiling package vpkg
@@ -49,9 +50,9 @@ Compiling architecture lut2_d_v of entity LUT2_D [\LUT2_D("1101")(0,3)\]
 Compiling architecture structure of entity I2C_Master [i2c_master_default]
 Compiling architecture behavioral of entity i2c_use_i2c_use_sch_tb
 Time Resolution for simulation is 1ps.
-Waiting for 5 sub-compilation(s) to finish...
-Compiled 187 VHDL Units
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 188 VHDL Units
 Compiled 2 Verilog Units
 Built simulation executable C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_isim_beh.exe
-Fuse Memory Usage: 66148 KB
-Fuse CPU Usage: 2671 ms
+Fuse Memory Usage: 66092 KB
+Fuse CPU Usage: 1811 ms
