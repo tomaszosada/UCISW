@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_isim_beh.exe" -prj "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_beh.prj" "work.i2c_use_i2c_use_sch_tb" "work.glbl" 

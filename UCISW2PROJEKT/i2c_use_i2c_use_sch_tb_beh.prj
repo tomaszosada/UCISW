@@ -1,0 +1,5 @@
+vhdl work "BlackBox.vhd"
+vhdl work "../../I2C_Master/I2C_Master.vhd"
+verilog work "i2c_use.vf"
+vhdl work "TESTUCISW.vhd"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
