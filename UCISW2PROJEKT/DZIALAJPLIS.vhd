@@ -36,7 +36,6 @@ ARCHITECTURE behavioral OF i2c_use_i2c_use_sch_tb IS
    SIGNAL Clk	:	STD_LOGIC;
    SIGNAL SDA	:	STD_LOGIC;
    SIGNAL SCL	:	STD_LOGIC;
-	
    constant clk_period : time := 20 ns;
 
 

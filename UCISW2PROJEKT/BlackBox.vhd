@@ -81,12 +81,12 @@ begin
       --below is a simple example
       case (state) is
          when IDLE =>
-            if START = '1' then
+            --if START = '1' then
 					next_state <= FIFO_PUSH;
 					START <= '0';
-				else 
-					next_state <=IDLE;
-            end if;
+			--	else 
+			--		next_state <=IDLE;
+           -- end if;
 			when FIFO_PUSH =>
 				if  BUSY = '0' then
 					next_state <= GO_STATE;
@@ -96,7 +96,7 @@ begin
 			when GO_STATE => 
 				if BUSY = '1' then
 					next_state <= BUSY_STATE;
-					ReadCnt <= "0001";
+					--ReadCnt <= "0000";
 				end if; 
 			when BUSY_STATE => 
 				if BUSY = '0' then
@@ -132,5 +132,5 @@ FIFO_PUSH_signal <= '1' when ( state = FIFO_PUSH   and FIFO_Full ='0') else '0';
 Go <= '1' when (state = GO_STATE ) else '0' ; 
 FIFO_DI <= X"00" when (state = GO_STATE and FIFO_Full ='0' ) else X"00";
 Address <= X"1D" when (state = GO_STATE) else X"00";
-ReadCnt <= "0001" when (state = GO_STATE or state = GO_STATE2) else "0000";
+ReadCnt <= "0001" when (state = GO_STATE2) else "0000";
 end Behavioral;
