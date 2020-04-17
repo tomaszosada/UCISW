@@ -1,2 +1,4 @@
 vhdtdtfi -lib work BlackBox.vhd -prj UCISW2PROJEKT -o BlackBox.spl -module BlackBox -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family artix7 BlackBox.spl C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/BlackBox.sym 
+vhdtdtfi -lib work BlackBox.vhd -prj UCISW2PROJEKT -o BlackBox.spl -module BlackBox -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 BlackBox.spl C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/BlackBox.sym 

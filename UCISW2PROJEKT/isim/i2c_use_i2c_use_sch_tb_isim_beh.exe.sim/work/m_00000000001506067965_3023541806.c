@@ -25,7 +25,7 @@
 
 
 
-extern void work_m_00000000002555668104_3023541806_init()
+extern void work_m_00000000001506067965_3023541806_init()
 {
-	xsi_register_didat("work_m_00000000002555668104_3023541806", "isim/i2c_use_i2c_use_sch_tb_isim_beh.exe.sim/work/m_00000000002555668104_3023541806.didat");
+	xsi_register_didat("work_m_00000000001506067965_3023541806", "isim/i2c_use_i2c_use_sch_tb_isim_beh.exe.sim/work/m_00000000001506067965_3023541806.didat");
 }

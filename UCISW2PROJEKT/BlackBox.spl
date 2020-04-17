@@ -4,6 +4,7 @@ FIFO_Full
 Busy
 RST
 CLK
+START
 =FIFO_DO[7:0]=
 [Outputs]
 Go

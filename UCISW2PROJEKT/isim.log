@@ -13,8 +13,78 @@ This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 1s
+# run 100000 ns
+[I2C 1.3101 us] START condition
+[I2C 21.9301 us] address byte: 1D
+[I2C 47.5651 us] byte transmitted: 00, NACK in response
+[I2C 51.3501 us] START condition
+[I2C 71.9701 us] address byte: 1D
+[I2C 97.6051 us] byte transmitted: 00, NACK in response
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 100000nx
+Incorrect usage of command 'run'
+Usage: run [ all | continue | <<time> [<unit>]> ]
+for detailed help use 'help run'
+# run 100000ns
+[I2C 1.3101 us] START condition
+[I2C 21.9301 us] address byte: 1D
+[I2C 50.1051 us] byte transmitted: 00, NACK in response
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 100000ns
+[I2C 1.3101 us] START condition
+[I2C 21.9301 us] address byte: 1D
+[I2C 50.1051 us] byte transmitted: 00, NACK in response
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 100000ns
+[I2C 1.3101 us] START condition
+[I2C 21.9301 us] address byte: 1D
+[I2C 50.1051 us] byte transmitted: 00, NACK in response
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 100000
+# run 100000ns
+[I2C 1.3101 us] START condition
+[I2C 21.9301 us] address byte: 1D
+[I2C 50.1051 us] byte transmitted: 00, NACK in response
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 100000ns
 [I2C 1.3101 us] START condition
 [I2C 21.9301 us] address byte: 1D
 [I2C 50.0651 us] byte transmitted: 00, NACK in response
-Stopped at time : 142558360 ns : File "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/DZIALAJPLIS.vhd" Line 54
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 100000ns
+[I2C 1.3101 us] START condition
+[I2C 21.9301 us] address byte: 1D
+[I2C 50.1051 us] byte transmitted: 00, NACK in response
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 80us
+[I2C 1.3101 us] START condition
+[I2C 21.9301 us] address byte: 1D
+[I2C 50.1051 us] byte transmitted: 00, NACK in response

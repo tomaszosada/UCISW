@@ -20,13 +20,15 @@
         <signal name="Clk" />
         <signal name="SDA" />
         <signal name="SCL" />
+        <signal name="START" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="Clk" />
         <port polarity="BiDirectional" name="SDA" />
         <port polarity="BiDirectional" name="SCL" />
+        <port polarity="Input" name="START" />
         <blockdef name="BlackBox">
-            <timestamp>2020-4-16T12:6:28</timestamp>
-            <rect width="352" x="64" y="-384" height="384" />
+            <timestamp>2020-4-17T9:0:53</timestamp>
+            <line x2="0" y1="32" y2="32" x1="64" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -43,6 +45,7 @@
             <line x2="480" y1="-96" y2="-96" x1="416" />
             <rect width="64" x="416" y="-44" height="24" />
             <line x2="480" y1="-32" y2="-32" x1="416" />
+            <rect width="352" x="64" y="-384" height="448" />
         </blockdef>
         <blockdef name="I2C_Master">
             <timestamp>2020-4-15T18:7:0</timestamp>
@@ -80,6 +83,7 @@
             <blockpin signalname="XLXN_5(7:0)" name="Address(7:0)" />
             <blockpin signalname="XLXN_6(3:0)" name="ReadCnt(3:0)" />
             <blockpin signalname="XLXN_7(7:0)" name="FIFO_DI(7:0)" />
+            <blockpin signalname="START" name="START" />
         </block>
         <block symbolname="I2C_Master" name="XLXI_2">
             <blockpin signalname="XLXN_2" name="Go" />
@@ -184,5 +188,9 @@
             <wire x2="2368" y1="720" y2="720" x1="2336" />
         </branch>
         <iomarker fontsize="28" x="2368" y="720" name="SCL" orien="R0" />
+        <branch name="START">
+            <wire x2="976" y1="1088" y2="1088" x1="416" />
+        </branch>
+        <iomarker fontsize="28" x="416" y="1088" name="START" orien="R180" />
     </sheet>
 </drawing>

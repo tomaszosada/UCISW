@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="BlackBox">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2020-4-16T12:6:28</timestamp>
+    <timestamp>2020-4-17T9:0:53</timestamp>
     <pin polarity="Input" x="0" y="-352" name="FIFO_Empty" />
     <pin polarity="Input" x="0" y="-288" name="FIFO_Full" />
     <pin polarity="Input" x="0" y="-224" name="Busy" />
@@ -14,36 +14,39 @@
     <pin polarity="Output" x="480" y="-160" name="Address(7:0)" />
     <pin polarity="Output" x="480" y="-96" name="ReadCnt(3:0)" />
     <pin polarity="Output" x="480" y="-32" name="FIFO_DI(7:0)" />
+    <pin polarity="Input" x="0" y="32" name="START" />
     <graph>
-        <rect width="352" x="64" y="-384" height="384" />
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="240" y="-392" type="symbol" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin FIFO_Empty" />
-        <line x2="0" y1="-352" y2="-352" x1="64" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin FIFO_Full" />
-        <line x2="0" y1="-288" y2="-288" x1="64" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin Busy" />
-        <line x2="0" y1="-224" y2="-224" x1="64" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin RST" />
-        <line x2="0" y1="-160" y2="-160" x1="64" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin CLK" />
-        <line x2="0" y1="-96" y2="-96" x1="64" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin FIFO_DO(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-352" type="pin Go" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-288" type="pin FIFO_Push_signal" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-224" type="pin FIFO_Pop" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-160" type="pin Address(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-96" type="pin ReadCnt(3:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-32" type="pin FIFO_DI(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="32" type="pin START" />
+        <line x2="0" y1="32" y2="32" x1="64" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
         <rect width="64" x="0" y="-44" height="24" />
         <line x2="0" y1="-32" y2="-32" x1="64" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-352" type="pin Go" />
         <line x2="480" y1="-352" y2="-352" x1="416" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-288" type="pin FIFO_Push_signal" />
         <line x2="480" y1="-288" y2="-288" x1="416" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-224" type="pin FIFO_Pop" />
         <line x2="480" y1="-224" y2="-224" x1="416" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-160" type="pin Address(7:0)" />
         <rect width="64" x="416" y="-172" height="24" />
         <line x2="480" y1="-160" y2="-160" x1="416" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-96" type="pin ReadCnt(3:0)" />
         <rect width="64" x="416" y="-108" height="24" />
         <line x2="480" y1="-96" y2="-96" x1="416" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-32" type="pin FIFO_DI(7:0)" />
         <rect width="64" x="416" y="-44" height="24" />
         <line x2="480" y1="-32" y2="-32" x1="416" />
+        <rect width="352" x="64" y="-384" height="448" />
     </graph>
 </symbol>

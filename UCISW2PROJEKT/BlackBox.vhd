@@ -42,7 +42,8 @@ FIFO_Push_signal: out std_logic ;
 Busy: in std_logic ;
 FIFO_Pop: out std_logic ;
 RST: in std_logic ;
-CLK:in std_logic);
+CLK:in std_logic;
+START: in std_logic);
 end BlackBox;
 
 
@@ -50,9 +51,8 @@ architecture Behavioral of BlackBox is
 
 --Insert the following in the architecture before the begin keyword
    --Use descriptive names for the states, like st1_reset, st2_search
-   type state_type is (IDLE , FIFO_PUSH, GO_STATE, BUSY_STATE, R_DATA, RESET, GO_STATE2, BUSY_STATE2, R_DATA2);
+   type state_type is (IDLE , FIFO_PUSH, GO_STATE, BUSY_STATE, R_DATA, RESET, GO_STATE2, BUSY_STATE2);
    signal state, next_state : state_type; 
-	signal START: std_logic;
  --Declare internal signals for all outputs of the state-machine
    --signal <output>_i : std_logic;  -- example output signal
    --other outputs
@@ -81,12 +81,11 @@ begin
       --below is a simple example
       case (state) is
          when IDLE =>
-            --if START = '1' then
+            if START = '1' then
 					next_state <= FIFO_PUSH;
-					START <= '0';
-			--	else 
-			--		next_state <=IDLE;
-           -- end if;
+				else 
+					next_state <=IDLE;
+            end if;
 			when FIFO_PUSH =>
 				if  BUSY = '0' then
 					next_state <= GO_STATE;
@@ -111,7 +110,6 @@ begin
 			when BUSY_STATE2 => 
 				if BUSY = '0' then
 					next_state <= R_DATA;
-					ReadCnt <= "0001";
 				else
 					next_state <= BUSY_STATE2; 
 				end if;
@@ -129,8 +127,7 @@ begin
    end process;
 
 FIFO_PUSH_signal <= '1' when ( state = FIFO_PUSH   and FIFO_Full ='0') else '0';
-Go <= '1' when (state = GO_STATE ) else '0' ; 
-FIFO_DI <= X"00" when (state = GO_STATE and FIFO_Full ='0' ) else X"00";
-Address <= X"1D" when (state = GO_STATE) else X"00";
+Go <= '1' when (state = GO_STATE OR state = GO_STATE2 ) else '0' ; 
+Address <= X"1D" when (state = GO_STATE);
 ReadCnt <= "0001" when (state = GO_STATE2) else "0000";
 end Behavioral;

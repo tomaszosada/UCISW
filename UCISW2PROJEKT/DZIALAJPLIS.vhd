@@ -27,7 +27,8 @@ ARCHITECTURE behavioral OF i2c_use_i2c_use_sch_tb IS
 
    COMPONENT i2c_use
    PORT( RST	:	IN	STD_LOGIC; 
-          Clk	:	IN	STD_LOGIC; 
+          Clk	:	IN	STD_LOGIC;
+				START	: IN STD_LOGIC;
           SDA	:	INOUT	STD_LOGIC; 
           SCL	:	INOUT	STD_LOGIC);
    END COMPONENT;
@@ -36,6 +37,7 @@ ARCHITECTURE behavioral OF i2c_use_i2c_use_sch_tb IS
    SIGNAL Clk	:	STD_LOGIC;
    SIGNAL SDA	:	STD_LOGIC;
    SIGNAL SCL	:	STD_LOGIC;
+	SIGNAL START : STD_LOGIC;
    constant clk_period : time := 20 ns;
 
 
@@ -45,7 +47,8 @@ BEGIN
 		RST => RST, 
 		Clk => Clk, 
 		SDA => SDA, 
-		SCL => SCL
+		SCL => SCL,
+		START => START
    );
 	
 	   -- Clock process definitions
@@ -60,6 +63,10 @@ BEGIN
 -- *** Test Bench - User Defined Section ***
    tb : PROCESS
    BEGIN
+	--	WAIT for 10 ns;
+		START<='1';
+		WAIT for 10 ns;
+		START<='0';
       WAIT; -- will wait forever
    END PROCESS;
 -- *** End Test Bench - User Defined Section ***
