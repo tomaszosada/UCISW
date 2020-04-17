@@ -2,9 +2,27 @@ Command line:
    i2c_use_i2c_use_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  51610
+     -socket  52009
 
-Fri Apr 17 12:15:47 2020
+Fri Apr 17 13:03:50 2020
 
 
- Elaboration Time: 0.296875 sec
+ Elaboration Time: 0.125 sec
+
+ Current Memory Usage: 5009.02 Meg
+
+ Total Signals          : 1274
+ Total Nets             : 570
+ Total Signal Drivers   : 346
+ Total Blocks           : 227
+ Total Primitive Blocks : 224
+ Total Processes        : 330
+ Total Traceable Variables  : 439
+ Total Scalar Nets and Variables : 9038
+
+ Total Simulation Time: 0.28125 sec
+
+ Current Memory Usage: 4694.45 Meg
+
+Fri Apr 17 15:09:10 2020
+

@@ -127,7 +127,10 @@ begin
    end process;
 
 FIFO_PUSH_signal <= '1' when ( state = FIFO_PUSH   and FIFO_Full ='0') else '0';
+--FIFO_DI 
+FIFO_DI <= X"00"; 
 Go <= '1' when (state = GO_STATE OR state = GO_STATE2 ) else '0' ; 
-Address <= X"1D" when (state = GO_STATE);
+Address <= X"1C" when (state = GO_STATE) else X"1D" when (state= GO_STATE2) ;
+
 ReadCnt <= "0001" when (state = GO_STATE2) else "0000";
 end Behavioral;
