@@ -1,26 +1,22 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_isim_beh.exe" -prj "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_beh.prj" "work.i2c_use_i2c_use_sch_tb" "work.glbl" 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_isim_beh.exe" -prj "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_beh.prj" "work.i2c_use_i2c_use_sch_tb" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.vf" into library work
-Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/I2C_Master.vhd" into library work
 Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/BlackBox.vhd" into library work
+Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.vhf" into library work
 Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/DZIALAJPLIS.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module glbl
-Compiling module i2c_use
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling package textio
 Compiling package std_logic_textio
 Compiling package vcomponents
-Compiling package vl_types
-Compiling architecture behavioral of entity BlackBox [blackbox_default]
 Compiling package std_logic_arith
+Compiling architecture behavioral of entity BlackBox [blackbox_default]
 Compiling package vital_timing
 Compiling package vital_primitives
 Compiling package vpkg
@@ -48,11 +44,11 @@ Compiling architecture lut4_l_v of entity LUT4_L [\LUT4_L("1100010000000100")(0,
 Compiling architecture lut3_d_v of entity LUT3_D [\LUT3_D("00001000")(0,7)\]
 Compiling architecture lut2_d_v of entity LUT2_D [\LUT2_D("1101")(0,3)\]
 Compiling architecture structure of entity I2C_Master [i2c_master_default]
+Compiling architecture behavioral of entity i2c_use [i2c_use_default]
 Compiling architecture behavioral of entity i2c_use_i2c_use_sch_tb
 Time Resolution for simulation is 1ps.
-Waiting for 6 sub-compilation(s) to finish...
-Compiled 188 VHDL Units
-Compiled 2 Verilog Units
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 189 VHDL Units
 Built simulation executable C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_isim_beh.exe
-Fuse Memory Usage: 66196 KB
-Fuse CPU Usage: 1687 ms
+Fuse Memory Usage: 64520 KB
+Fuse CPU Usage: 2562 ms

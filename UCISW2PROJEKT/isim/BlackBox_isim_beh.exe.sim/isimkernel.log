@@ -1,0 +1,28 @@
+Command line:
+   BlackBox_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54195
+
+Fri May 15 14:37:25 2020
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5004.22 Meg
+
+ Total Signals          : 16
+ Total Nets             : 47
+ Total Signal Drivers   : 9
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 9
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 407
+
+ Total Simulation Time: 0.15625 sec
+
+ Current Memory Usage: 5004.22 Meg
+
+Fri May 15 14:37:28 2020
+

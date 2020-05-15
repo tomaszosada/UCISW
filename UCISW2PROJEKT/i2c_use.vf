@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : i2c_use.vf
-// /___/   /\     Timestamp : 04/17/2020 11:03:31
+// /___/   /\     Timestamp : 05/15/2020 14:33:22
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -23,12 +23,14 @@
 module i2c_use(Clk, 
                RST, 
                START, 
+               sygnal, 
                SCL, 
                SDA);
 
     input Clk;
     input RST;
     input START;
+   output [7:0] sygnal;
     inout SCL;
     inout SDA;
    
@@ -55,7 +57,8 @@ module i2c_use(Clk,
                     .FIFO_Pop(XLXN_4), 
                     .FIFO_Push_signal(XLXN_3), 
                     .Go(XLXN_2), 
-                    .ReadCnt(XLXN_6[3:0]));
+                    .ReadCnt(XLXN_6[3:0]), 
+                    .sygnal(sygnal[7:0]));
    I2C_Master  XLXI_2 (.Address(XLXN_5[7:0]), 
                       .Clk(Clk), 
                       .FIFO_DI(XLXN_7[7:0]), 

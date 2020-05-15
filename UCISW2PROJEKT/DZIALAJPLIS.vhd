@@ -30,7 +30,8 @@ ARCHITECTURE behavioral OF i2c_use_i2c_use_sch_tb IS
           Clk	:	IN	STD_LOGIC;
 				START	: IN STD_LOGIC;
           SDA	:	INOUT	STD_LOGIC; 
-          SCL	:	INOUT	STD_LOGIC);
+          SCL	:	INOUT	STD_LOGIC;
+			 sygnal : OUT STD_LOGIC_VECTOR(7 downto 0));
    END COMPONENT;
 
    SIGNAL RST	:	STD_LOGIC;
@@ -49,6 +50,7 @@ BEGIN
 		SDA => SDA, 
 		SCL => SCL,
 		START => START
+--		sygnal => sygnal
    );
 	
 	   -- Clock process definitions

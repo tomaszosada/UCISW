@@ -43,7 +43,8 @@ Busy: in std_logic ;
 FIFO_Pop: out std_logic ;
 RST: in std_logic ;
 CLK:in std_logic;
-START: in std_logic);
+START: in std_logic;
+sygnal: out std_logic_vector(7 downto 0));
 end BlackBox;
 
 
@@ -117,7 +118,7 @@ begin
 				next_state <= RESET;
 			when RESET =>
 				if  RST = '1'   then
-					next_state <= GO_STATE2;
+					next_state <= IDLE;
 				else
 					next_state <= RESET;
 				end if;
@@ -128,9 +129,10 @@ begin
 
 FIFO_PUSH_signal <= '1' when ( state = FIFO_PUSH   and FIFO_Full ='0') else '0';
 --FIFO_DI 
-FIFO_DI <= X"00"; 
+FIFO_DI <= X"01" when ( state = GO_STATE or state = GO_STATE2  )  and  FIFO_Full ='0'  else X"00";
 Go <= '1' when (state = GO_STATE OR state = GO_STATE2 ) else '0' ; 
-Address <= X"1C" when (state = GO_STATE) else X"1D" when (state= GO_STATE2) ;
-
+Address <= X"3A" when (state = GO_STATE) else X"3B" when (state= GO_STATE2) ;
+sygnal <= FIFO_DO when (state = R_DATA and rising_edge(CLK));
+FIFO_POP <= '1' when (state = R_DATA);
 ReadCnt <= "0001" when (state = GO_STATE2) else "0000";
 end Behavioral;

@@ -8,64 +8,16 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 70us
+# run 100us
 [I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 1D
-[I2C 50.1051 us] byte transmitted: 00, NACK in response
-# run 10us
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 80us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 1D
-[I2C 50.1051 us] byte transmitted: 00, NACK in response
-# restart
-# run 80 us
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 1D
-[I2C 50.1051 us] byte transmitted: 00, NACK in response
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 80us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 1C
+[I2C 21.9301 us] address byte: 3A
 [I2C 44.4301 us] byte received: 00
 [I2C 49.4301 us] STOP condition
 [I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 1C
-[I2C 76.9701 us] STOP condition
+[I2C 71.9701 us] address byte: 3B
+[I2C 97.6051 us] byte transmitted: E5, NACK in response
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 80 us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 1C
-[I2C 44.4301 us] byte received: 00
-[I2C 49.4301 us] STOP condition
-[I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 1C
-[I2C 76.9701 us] STOP condition
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 80us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 1C
-[I2C 44.4301 us] byte received: 00
-[I2C 49.4301 us] STOP condition
-[I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 1D
-# run 80us
-[I2C 97.6051 us] byte transmitted: 00, NACK in response

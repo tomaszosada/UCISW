@@ -21,13 +21,17 @@
         <signal name="SDA" />
         <signal name="SCL" />
         <signal name="START" />
+        <signal name="sygnal(7:0)" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="Clk" />
         <port polarity="BiDirectional" name="SDA" />
         <port polarity="BiDirectional" name="SCL" />
         <port polarity="Input" name="START" />
+        <port polarity="Output" name="sygnal(7:0)" />
         <blockdef name="BlackBox">
-            <timestamp>2020-4-17T9:0:53</timestamp>
+            <timestamp>2020-5-15T11:52:57</timestamp>
+            <rect width="64" x="0" y="84" height="24" />
+            <line x2="0" y1="96" y2="96" x1="64" />
             <line x2="0" y1="32" y2="32" x1="64" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
@@ -45,7 +49,7 @@
             <line x2="480" y1="-96" y2="-96" x1="416" />
             <rect width="64" x="416" y="-44" height="24" />
             <line x2="480" y1="-32" y2="-32" x1="416" />
-            <rect width="352" x="64" y="-384" height="448" />
+            <rect width="352" x="64" y="-384" height="512" />
         </blockdef>
         <blockdef name="I2C_Master">
             <timestamp>2020-4-15T18:7:0</timestamp>
@@ -76,6 +80,7 @@
             <blockpin signalname="XLXN_13" name="Busy" />
             <blockpin signalname="RST" name="RST" />
             <blockpin signalname="Clk" name="CLK" />
+            <blockpin signalname="START" name="START" />
             <blockpin signalname="XLXN_10(7:0)" name="FIFO_DO(7:0)" />
             <blockpin signalname="XLXN_2" name="Go" />
             <blockpin signalname="XLXN_3" name="FIFO_Push_signal" />
@@ -83,7 +88,7 @@
             <blockpin signalname="XLXN_5(7:0)" name="Address(7:0)" />
             <blockpin signalname="XLXN_6(3:0)" name="ReadCnt(3:0)" />
             <blockpin signalname="XLXN_7(7:0)" name="FIFO_DI(7:0)" />
-            <blockpin signalname="START" name="START" />
+            <blockpin signalname="sygnal(7:0)" name="sygnal(7:0)" />
         </block>
         <block symbolname="I2C_Master" name="XLXI_2">
             <blockpin signalname="XLXN_2" name="Go" />
@@ -192,5 +197,10 @@
             <wire x2="976" y1="1088" y2="1088" x1="416" />
         </branch>
         <iomarker fontsize="28" x="416" y="1088" name="START" orien="R180" />
+        <branch name="sygnal(7:0)">
+            <wire x2="976" y1="1152" y2="1152" x1="704" />
+            <wire x2="704" y1="1152" y2="1344" x1="704" />
+        </branch>
+        <iomarker fontsize="28" x="704" y="1344" name="sygnal(7:0)" orien="R90" />
     </sheet>
 </drawing>
