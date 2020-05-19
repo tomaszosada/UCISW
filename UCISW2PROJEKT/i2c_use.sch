@@ -29,7 +29,13 @@
         <port polarity="Input" name="START" />
         <port polarity="Output" name="sygnal(7:0)" />
         <blockdef name="BlackBox">
-            <timestamp>2020-5-15T11:52:57</timestamp>
+            <timestamp>2020-5-19T18:59:14</timestamp>
+            <rect width="64" x="416" y="340" height="24" />
+            <line x2="480" y1="352" y2="352" x1="416" />
+            <rect width="64" x="416" y="148" height="24" />
+            <line x2="480" y1="160" y2="160" x1="416" />
+            <rect width="64" x="416" y="276" height="24" />
+            <line x2="480" y1="288" y2="288" x1="416" />
             <rect width="64" x="0" y="84" height="24" />
             <line x2="0" y1="96" y2="96" x1="64" />
             <line x2="0" y1="32" y2="32" x1="64" />
@@ -49,7 +55,7 @@
             <line x2="480" y1="-96" y2="-96" x1="416" />
             <rect width="64" x="416" y="-44" height="24" />
             <line x2="480" y1="-32" y2="-32" x1="416" />
-            <rect width="352" x="64" y="-384" height="512" />
+            <rect width="352" x="64" y="-384" height="768" />
         </blockdef>
         <blockdef name="I2C_Master">
             <timestamp>2020-4-15T18:7:0</timestamp>
@@ -89,6 +95,9 @@
             <blockpin signalname="XLXN_6(3:0)" name="ReadCnt(3:0)" />
             <blockpin signalname="XLXN_7(7:0)" name="FIFO_DI(7:0)" />
             <blockpin signalname="sygnal(7:0)" name="sygnal(7:0)" />
+            <blockpin name="acc_x(15:0)" />
+            <blockpin name="acc_z(15:0)" />
+            <blockpin name="acc_y(15:0)" />
         </block>
         <block symbolname="I2C_Master" name="XLXI_2">
             <blockpin signalname="XLXN_2" name="Go" />

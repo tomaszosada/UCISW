@@ -44,7 +44,10 @@ FIFO_Pop: out std_logic ;
 RST: in std_logic ;
 CLK:in std_logic;
 START: in std_logic;
-sygnal: out std_logic_vector(7 downto 0));
+sygnal: out std_logic_vector(7 downto 0);
+acc_x : OUT     STD_LOGIC_VECTOR(15 DOWNTO 0);  --x-axis acceleration data
+acc_y : OUT     STD_LOGIC_VECTOR(15 DOWNTO 0);  --y-axis acceleration data
+acc_z : OUT     STD_LOGIC_VECTOR(15 DOWNTO 0));
 end BlackBox;
 
 
@@ -54,6 +57,9 @@ architecture Behavioral of BlackBox is
    --Use descriptive names for the states, like st1_reset, st2_search
    type state_type is (IDLE , FIFO_PUSH, GO_STATE, BUSY_STATE, R_DATA, RESET, GO_STATE2, BUSY_STATE2);
    signal state, next_state : state_type; 
+	signal acc_x_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
+	signal acc_y_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
+	signal acc_z_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
  --Declare internal signals for all outputs of the state-machine
    --signal <output>_i : std_logic;  -- example output signal
    --other outputs
@@ -72,7 +78,13 @@ begin
       end if;
    end process;
  
-
+	CONFIGURE: process (state, BUSY, START, FIFO_EMPTY)
+	begin
+	--setting data output rate to 50HZ 
+		FIFO_DI <= "00001001";
+	--settin data range
+	
+	end process;
  
    NEXT_STATE_DECODE: process (state,BUSY, RST, FIFO_FULL, START)
    begin
