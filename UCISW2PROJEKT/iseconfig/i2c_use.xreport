@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-05-19T21:00:17</DateModified>
+  <DateModified>2020-05-19T21:43:26</DateModified>
   <ModuleName>i2c_use</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/iseconfig/i2c_use.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/iseconfig/i2c_use.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT\</ImplementationReportsDirectory>
   <DateInitialized>2020-04-16T16:35:31</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

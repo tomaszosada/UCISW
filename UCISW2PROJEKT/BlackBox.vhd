@@ -47,7 +47,7 @@ START: in std_logic;
 sygnal: out std_logic_vector(7 downto 0);
 acc_x : OUT     STD_LOGIC_VECTOR(15 DOWNTO 0);  --x-axis acceleration data
 acc_y : OUT     STD_LOGIC_VECTOR(15 DOWNTO 0);  --y-axis acceleration data
-acc_z : OUT     STD_LOGIC_VECTOR(15 DOWNTO 0));
+acc_z : OUT     STD_LOGIC_VECTOR(15 DOWNTO 0)); --z-axis acceleration data
 end BlackBox;
 
 
@@ -139,8 +139,39 @@ begin
       end case;      
    end process;
 
+process(CLK, state)
+		begin
+			if rising_edge(CLK) then
+				if  then
+					case  is
+
+						when  =>
+							acc_x_var(7 downto 0) <= FIFO_DO;
+							
+						when  =>
+							acc_x_var(15 downto 8) <= FIFO_DO;
+							
+						when  =>
+							acc_y_var(7 downto 0) <= FIFO_DO;
+							
+						when  =>
+							acc_y_var(15 downto 8) <= FIFO_DO;
+							
+						when  =>
+							acc_z_var(7 downto 0) <= FIFO_DO;
+							
+						when  =>
+							acc_z_var(15 downto 8) <= FIFO_DO;
+					end case;
+				end if;
+			end if;
+		end process;
+		
+-- convert data to output
+acc_x <= acc_x_var;  
+acc_y <= acc_x_var; 
+acc_z <= acc_x_var;  
 FIFO_PUSH_signal <= '1' when ( state = FIFO_PUSH   and FIFO_Full ='0') else '0';
---FIFO_DI 
 FIFO_DI <= X"01" when ( state = GO_STATE or state = GO_STATE2  )  and  FIFO_Full ='0'  else X"00";
 Go <= '1' when (state = GO_STATE OR state = GO_STATE2 ) else '0' ; 
 Address <= X"3A" when (state = GO_STATE) else X"3B" when (state= GO_STATE2) ;
