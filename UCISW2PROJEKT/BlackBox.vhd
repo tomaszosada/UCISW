@@ -146,7 +146,7 @@ begin
             next_state <= IDLE;
       end case;      
    end process;
-
+--proces pomiarowy do dokonczenia
 process(CLK, state)
 		begin
 			if rising_edge(CLK) then
@@ -155,6 +155,7 @@ process(CLK, state)
 
 						when 0 =>
 							acc_x_var(7 downto 0) <= FIFO_DO;
+							--FIFO_POP <= 1;
 							
 						when 1 =>
 							acc_x_var(15 downto 8) <= FIFO_DO;
@@ -186,4 +187,8 @@ Address <= X"3A" when (state = GO_STATE) else X"3B" when (state= GO_STATE2) ;
 sygnal <= FIFO_DO when (state = R_DATA and rising_edge(CLK));
 FIFO_POP <= '1' when (state = R_DATA);
 ReadCnt <= "0001" when (state = GO_STATE2) else "0000";
+--Setting outputs
+acc_x <= acc_x_var;
+acc_y <= acc_y_var;
+acc_z <= acc_z_var;
 end Behavioral;
