@@ -55,7 +55,7 @@ architecture Behavioral of BlackBox is
 
 --Insert the following in the architecture before the begin keyword
    --Use descriptive names for the states, like st1_reset, st2_search
-   type state_type is (IDLE , FIFO_PUSH, GO_STATE, BUSY_STATE, R_DATA, RESET, GO_STATE2, BUSY_STATE2, MEASURE);
+   type state_type is (IDLE , FIFO_PUSH, GO_STATE, BUSY_STATE, R_DATA, RESET, GO_STATE2, BUSY_STATE2, FIFO_P);
    signal state, next_state : state_type; 
 	signal acc_x_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
 	signal acc_y_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -116,7 +116,6 @@ begin
 			when GO_STATE => 
 				if BUSY = '1' then
 					next_state <= BUSY_STATE;
-					--ReadCnt <= "0000";
 				end if; 
 			when BUSY_STATE => 
 				if BUSY = '0' then
@@ -135,7 +134,9 @@ begin
 					next_state <= BUSY_STATE2; 
 				end if;
 			when R_DATA =>
-				next_state <= RESET;
+				next_state <= FIFO_P;
+			when FIFO_P=>
+				next_state <= FIFO_PUSH;
 			when RESET =>
 				if  RST = '1'   then
 					next_state <= IDLE;
@@ -146,16 +147,16 @@ begin
             next_state <= IDLE;
       end case;      
    end process;
---proces pomiarowy do dokonczenia
+	--proces pomiarowy do dokonczenia
+--zamiast nowego stanu to moze w READ_DATA?
 process(CLK, state)
 		begin
-			if rising_edge(CLK) then
-				if  state = MEASURE then
+		if rising_edge(CLK) then
+				if  state = R_DATA then
 					case counter is
 
 						when 0 =>
 							acc_x_var(7 downto 0) <= FIFO_DO;
-							--FIFO_POP <= 1;
 							
 						when 1 =>
 							acc_x_var(15 downto 8) <= FIFO_DO;
@@ -171,24 +172,25 @@ process(CLK, state)
 							
 						when 5 =>
 							acc_z_var(15 downto 8) <= FIFO_DO;
+							counter <= 0;
 					end case;
-				end if;
+					counter <= counter + 1;
+			end if;
 			end if;
 		end process;
+
 		
 -- convert data to output
 acc_x <= acc_x_var;  
-acc_y <= acc_x_var; 
-acc_z <= acc_x_var;  
-FIFO_PUSH_signal <= '1' when ( state = FIFO_PUSH   and FIFO_Full ='0') else '0';
+acc_y <= acc_y_var; 
+acc_z <= acc_z_var;  
+FIFO_PUSH_signal <= '1' when ( state= FIFO_PUSH   and FIFO_Full ='0') else '0';
 FIFO_DI <= X"01" when ( state = GO_STATE or state = GO_STATE2  )  and  FIFO_Full ='0'  else X"00";
 Go <= '1' when (state = GO_STATE OR state = GO_STATE2 ) else '0' ; 
 Address <= X"3A" when (state = GO_STATE) else X"3B" when (state= GO_STATE2) ;
 sygnal <= FIFO_DO when (state = R_DATA and rising_edge(CLK));
 FIFO_POP <= '1' when (state = R_DATA);
 ReadCnt <= "0001" when (state = GO_STATE2) else "0000";
---Setting outputs
-acc_x <= acc_x_var;
-acc_y <= acc_y_var;
-acc_z <= acc_z_var;
+
+
 end Behavioral;
