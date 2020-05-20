@@ -55,11 +55,12 @@ architecture Behavioral of BlackBox is
 
 --Insert the following in the architecture before the begin keyword
    --Use descriptive names for the states, like st1_reset, st2_search
-   type state_type is (IDLE , FIFO_PUSH, GO_STATE, BUSY_STATE, R_DATA, RESET, GO_STATE2, BUSY_STATE2);
+   type state_type is (IDLE , FIFO_PUSH, GO_STATE, BUSY_STATE, R_DATA, RESET, GO_STATE2, BUSY_STATE2, MEASURE);
    signal state, next_state : state_type; 
 	signal acc_x_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
 	signal acc_y_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
 	signal acc_z_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
+	signal counter : integer range 0 to 5;
  --Declare internal signals for all outputs of the state-machine
    --signal <output>_i : std_logic;  -- example output signal
    --other outputs
@@ -77,7 +78,7 @@ begin
          end if;        
       end if;
    end process;
- 
+ --zamiast procesu CONFIGURE dac po prostu dodatkowe stany do maszyny stanow?
 	CONFIGURE: process (state, BUSY, START, FIFO_EMPTY)
 	begin
 	--adres a potem dane 
@@ -86,8 +87,10 @@ begin
 		FIFO_DI <= "00001001";
 	--data format address 0x31 (data range?)
 	--0x2c data rate address
-	--0x2D turn on Measure (D3)
-	--settin data range
+	--0x2D turn on Measure (D3) 00001000
+	--setting data range to 10?? => g range +- 8g
+	--FIFO MODE (0x38) 10000000 - to bedzie FIFO
+	
 	
 	end process;
  
@@ -147,25 +150,25 @@ begin
 process(CLK, state)
 		begin
 			if rising_edge(CLK) then
-				if  then
-					case  is
+				if  state = MEASURE then
+					case counter is
 
-						when  =>
+						when 0 =>
 							acc_x_var(7 downto 0) <= FIFO_DO;
 							
-						when  =>
+						when 1 =>
 							acc_x_var(15 downto 8) <= FIFO_DO;
 							
-						when  =>
+						when 2 =>
 							acc_y_var(7 downto 0) <= FIFO_DO;
 							
-						when  =>
+						when 3 =>
 							acc_y_var(15 downto 8) <= FIFO_DO;
 							
-						when  =>
+						when 4 =>
 							acc_z_var(7 downto 0) <= FIFO_DO;
 							
-						when  =>
+						when 5 =>
 							acc_z_var(15 downto 8) <= FIFO_DO;
 					end case;
 				end if;
