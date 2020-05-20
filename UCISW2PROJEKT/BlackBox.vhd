@@ -55,7 +55,7 @@ architecture Behavioral of BlackBox is
 
 --Insert the following in the architecture before the begin keyword
    --Use descriptive names for the states, like st1_reset, st2_search
-   type state_type is (IDLE , FIFO_PUSH, GO_STATE, BUSY_STATE, R_DATA, RESET, GO_STATE2, BUSY_STATE2, FIFO_P);
+   type state_type is (IDLE , FIFO_PUSH, GO_STATE, BUSY_STATE, R_DATA, RESET, GO_STATE2, BUSY_STATE2);
    signal state, next_state : state_type; 
 	signal acc_x_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
 	signal acc_y_var : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -134,8 +134,6 @@ begin
 					next_state <= BUSY_STATE2; 
 				end if;
 			when R_DATA =>
-				next_state <= FIFO_P;
-			when FIFO_P=>
 				next_state <= FIFO_PUSH;
 			when RESET =>
 				if  RST = '1'   then
@@ -147,6 +145,22 @@ begin
             next_state <= IDLE;
       end case;      
    end process;
+	
+process(CLK)
+	begin
+		if rising_edge(CLK) then
+			if RST = '1' then
+				counter <= 0;
+			end if;
+			if state = R_DATA then
+					if counter < 5 then
+						counter <= counter + 1;
+					else
+						counter <= 0;
+					end if;
+			end if;
+		end if;
+	end process;
 	--proces pomiarowy do dokonczenia
 --zamiast nowego stanu to moze w READ_DATA?
 process(CLK, state)
@@ -172,9 +186,7 @@ process(CLK, state)
 							
 						when 5 =>
 							acc_z_var(15 downto 8) <= FIFO_DO;
-							counter <= 0;
 					end case;
-					counter <= counter + 1;
 			end if;
 			end if;
 		end process;

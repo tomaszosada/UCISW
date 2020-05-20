@@ -8,352 +8,82 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 400us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 3A
-[I2C 44.4301 us] byte received: 00
-[I2C 49.4301 us] STOP condition
-[I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 3B
-[I2C 97.6051 us] byte transmitted: E5, NACK in response
-[I2C 101.4501 us] START condition
-[I2C 122.0701 us] address byte: 3A
-[I2C 127.0701 us] STOP condition
-[I2C 128.9901 us] START condition
-[I2C 149.6101 us] address byte: 3B
-[I2C 175.2451 us] byte transmitted: E5, NACK in response
-[I2C 179.0901 us] START condition
-[I2C 199.7101 us] address byte: 3A
-[I2C 204.7101 us] STOP condition
-[I2C 206.6301 us] START condition
-[I2C 227.2501 us] address byte: 3B
-[I2C 252.8851 us] byte transmitted: E5, NACK in response
-[I2C 256.7301 us] START condition
-[I2C 277.3501 us] address byte: 3A
-[I2C 282.3501 us] STOP condition
-[I2C 284.2701 us] START condition
-[I2C 304.8901 us] address byte: 3B
-[I2C 330.5251 us] byte transmitted: E5, NACK in response
-[I2C 334.3701 us] START condition
-[I2C 354.9901 us] address byte: 3A
-[I2C 359.9901 us] STOP condition
-[I2C 361.9101 us] START condition
-[I2C 382.5301 us] address byte: 3B
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 400us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 3A
-[I2C 44.4301 us] byte received: 00
-[I2C 49.4301 us] STOP condition
-[I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 3B
-[I2C 97.6051 us] byte transmitted: E5, NACK in response
-[I2C 101.4501 us] START condition
-[I2C 122.0701 us] address byte: 3A
-[I2C 127.0701 us] STOP condition
-[I2C 128.9901 us] START condition
-[I2C 149.6101 us] address byte: 3B
-[I2C 175.2451 us] byte transmitted: E5, NACK in response
-[I2C 179.0901 us] START condition
-[I2C 199.7101 us] address byte: 3A
-[I2C 204.7101 us] STOP condition
-[I2C 206.6301 us] START condition
-[I2C 227.2501 us] address byte: 3B
-[I2C 252.8851 us] byte transmitted: E5, NACK in response
-[I2C 256.7301 us] START condition
-[I2C 277.3501 us] address byte: 3A
-[I2C 282.3501 us] STOP condition
-[I2C 284.2701 us] START condition
-[I2C 304.8901 us] address byte: 3B
-[I2C 330.5251 us] byte transmitted: E5, NACK in response
-[I2C 334.3701 us] START condition
-[I2C 354.9901 us] address byte: 3A
-[I2C 359.9901 us] STOP condition
-[I2C 361.9101 us] START condition
-[I2C 382.5301 us] address byte: 3B
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 400us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 3A
-[I2C 44.4301 us] byte received: 00
-[I2C 49.4301 us] STOP condition
-[I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 3B
-[I2C 97.6051 us] byte transmitted: E5, NACK in response
-[I2C 101.4501 us] START condition
-[I2C 122.0701 us] address byte: 3A
-[I2C 127.0701 us] STOP condition
-[I2C 128.9901 us] START condition
-[I2C 149.6101 us] address byte: 3B
-[I2C 175.2451 us] byte transmitted: E5, NACK in response
-[I2C 179.0901 us] START condition
-[I2C 199.7101 us] address byte: 3A
-[I2C 204.7101 us] STOP condition
-[I2C 206.6301 us] START condition
-[I2C 227.2501 us] address byte: 3B
-[I2C 252.8851 us] byte transmitted: E5, NACK in response
-[I2C 256.7301 us] START condition
-[I2C 277.3501 us] address byte: 3A
-[I2C 282.3501 us] STOP condition
-[I2C 284.2701 us] START condition
-[I2C 304.8901 us] address byte: 3B
-[I2C 330.5251 us] byte transmitted: E5, NACK in response
-[I2C 334.3701 us] START condition
-[I2C 354.9901 us] address byte: 3A
-[I2C 359.9901 us] STOP condition
-[I2C 361.9101 us] START condition
-[I2C 382.5301 us] address byte: 3B
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 400us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 3A
-[I2C 44.4301 us] byte received: 00
-[I2C 49.4301 us] STOP condition
-[I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 3B
-[I2C 97.6051 us] byte transmitted: E5, NACK in response
-[I2C 101.4501 us] START condition
-[I2C 122.0701 us] address byte: 3A
-[I2C 127.0701 us] STOP condition
-[I2C 128.9901 us] START condition
-[I2C 149.6101 us] address byte: 3B
-[I2C 175.2451 us] byte transmitted: E5, NACK in response
-[I2C 179.0901 us] START condition
-[I2C 199.7101 us] address byte: 3A
-[I2C 204.7101 us] STOP condition
-[I2C 206.6301 us] START condition
-[I2C 227.2501 us] address byte: 3B
-[I2C 252.8851 us] byte transmitted: E5, NACK in response
-[I2C 256.7301 us] START condition
-[I2C 277.3501 us] address byte: 3A
-[I2C 282.3501 us] STOP condition
-[I2C 284.2701 us] START condition
-[I2C 304.8901 us] address byte: 3B
-[I2C 330.5251 us] byte transmitted: E5, NACK in response
-[I2C 334.3701 us] START condition
-[I2C 354.9901 us] address byte: 3A
-[I2C 359.9901 us] STOP condition
-[I2C 361.9101 us] START condition
-[I2C 382.5301 us] address byte: 3B
-# run 100us
-[I2C 408.1651 us] byte transmitted: E5, NACK in response
-[I2C 412.0101 us] START condition
-[I2C 432.6301 us] address byte: 3A
-[I2C 437.6301 us] STOP condition
-[I2C 439.5501 us] START condition
-[I2C 460.1701 us] address byte: 3B
-[I2C 485.8051 us] byte transmitted: E5, NACK in response
-[I2C 489.6501 us] START condition
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 400 us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 3A
-[I2C 44.4301 us] byte received: 00
-[I2C 49.4301 us] STOP condition
-[I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 3B
-[I2C 97.6051 us] byte transmitted: E5, NACK in response
-[I2C 101.4501 us] START condition
-[I2C 122.0701 us] address byte: 3A
-[I2C 127.0701 us] STOP condition
-[I2C 128.9901 us] START condition
-[I2C 149.6101 us] address byte: 3B
-[I2C 175.2451 us] byte transmitted: E5, NACK in response
-[I2C 179.0901 us] START condition
-[I2C 199.7101 us] address byte: 3A
-[I2C 204.7101 us] STOP condition
-[I2C 206.6301 us] START condition
-[I2C 227.2501 us] address byte: 3B
-[I2C 252.8851 us] byte transmitted: E5, NACK in response
-[I2C 256.7301 us] START condition
-[I2C 277.3501 us] address byte: 3A
-[I2C 282.3501 us] STOP condition
-[I2C 284.2701 us] START condition
-[I2C 304.8901 us] address byte: 3B
-[I2C 330.5251 us] byte transmitted: E5, NACK in response
-[I2C 334.3701 us] START condition
-[I2C 354.9901 us] address byte: 3A
-[I2C 359.9901 us] STOP condition
-[I2C 361.9101 us] START condition
-[I2C 382.5301 us] address byte: 3B
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 400 us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 3A
-[I2C 44.4301 us] byte received: 00
-[I2C 49.4301 us] STOP condition
-[I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 3B
-[I2C 97.6051 us] byte transmitted: E5, NACK in response
-[I2C 101.4501 us] START condition
-[I2C 122.0701 us] address byte: 3A
-[I2C 127.0701 us] STOP condition
-[I2C 128.9901 us] START condition
-[I2C 149.6101 us] address byte: 3B
-[I2C 175.2451 us] byte transmitted: E5, NACK in response
-[I2C 179.0901 us] START condition
-[I2C 199.7101 us] address byte: 3A
-[I2C 204.7101 us] STOP condition
-[I2C 206.6301 us] START condition
-[I2C 227.2501 us] address byte: 3B
-[I2C 252.8851 us] byte transmitted: E5, NACK in response
-[I2C 256.7301 us] START condition
-[I2C 277.3501 us] address byte: 3A
-[I2C 282.3501 us] STOP condition
-[I2C 284.2701 us] START condition
-[I2C 304.8901 us] address byte: 3B
-[I2C 330.5251 us] byte transmitted: E5, NACK in response
-[I2C 334.3701 us] START condition
-[I2C 354.9901 us] address byte: 3A
-[I2C 359.9901 us] STOP condition
-[I2C 361.9101 us] START condition
-[I2C 382.5301 us] address byte: 3B
-# run 400us
-[I2C 408.1651 us] byte transmitted: E5, NACK in response
-[I2C 412.0101 us] START condition
-[I2C 432.6301 us] address byte: 3A
-[I2C 437.6301 us] STOP condition
-[I2C 439.5501 us] START condition
-[I2C 460.1701 us] address byte: 3B
-[I2C 485.8051 us] byte transmitted: E5, NACK in response
-[I2C 489.6501 us] START condition
-[I2C 510.2701 us] address byte: 3A
-[I2C 515.2701 us] STOP condition
-[I2C 517.1901 us] START condition
-[I2C 537.8101 us] address byte: 3B
-[I2C 563.4451 us] byte transmitted: E5, NACK in response
-[I2C 567.2901 us] START condition
-[I2C 587.9101 us] address byte: 3A
-[I2C 592.9101 us] STOP condition
-[I2C 594.8301 us] START condition
-[I2C 615.4501 us] address byte: 3B
-[I2C 641.0851 us] byte transmitted: E5, NACK in response
-[I2C 644.9301 us] START condition
-[I2C 665.5501 us] address byte: 3A
-[I2C 670.5501 us] STOP condition
-[I2C 672.4701 us] START condition
-[I2C 693.0901 us] address byte: 3B
-[I2C 718.7251 us] byte transmitted: E5, NACK in response
-[I2C 722.5701 us] START condition
-[I2C 743.1901 us] address byte: 3A
-[I2C 748.1901 us] STOP condition
-[I2C 750.1101 us] START condition
-[I2C 770.7301 us] address byte: 3B
-[I2C 796.3651 us] byte transmitted: E5, NACK in response
-[I2C 800.2101 us] START condition
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 600 us
-[I2C 1.3101 us] START condition
-[I2C 21.9301 us] address byte: 3A
-[I2C 44.4301 us] byte received: 00
-[I2C 49.4301 us] STOP condition
-[I2C 51.3501 us] START condition
-[I2C 71.9701 us] address byte: 3B
-[I2C 97.6051 us] byte transmitted: E5, NACK in response
-[I2C 101.4501 us] START condition
-[I2C 122.0701 us] address byte: 3A
-[I2C 127.0701 us] STOP condition
-[I2C 128.9901 us] START condition
-[I2C 149.6101 us] address byte: 3B
-[I2C 175.2451 us] byte transmitted: E5, NACK in response
-[I2C 179.0901 us] START condition
-[I2C 199.7101 us] address byte: 3A
-[I2C 204.7101 us] STOP condition
-[I2C 206.6301 us] START condition
-[I2C 227.2501 us] address byte: 3B
-[I2C 252.8851 us] byte transmitted: E5, NACK in response
-[I2C 256.7301 us] START condition
-[I2C 277.3501 us] address byte: 3A
-[I2C 282.3501 us] STOP condition
-[I2C 284.2701 us] START condition
-[I2C 304.8901 us] address byte: 3B
-[I2C 330.5251 us] byte transmitted: E5, NACK in response
-[I2C 334.3701 us] START condition
-[I2C 354.9901 us] address byte: 3A
-[I2C 359.9901 us] STOP condition
-[I2C 361.9101 us] START condition
-[I2C 382.5301 us] address byte: 3B
-[I2C 408.1651 us] byte transmitted: E5, NACK in response
-[I2C 412.0101 us] START condition
-[I2C 432.6301 us] address byte: 3A
-[I2C 437.6301 us] STOP condition
-[I2C 439.5501 us] START condition
-[I2C 460.1701 us] address byte: 3B
-[I2C 485.8051 us] byte transmitted: E5, NACK in response
-[I2C 489.6501 us] START condition
-[I2C 510.2701 us] address byte: 3A
-[I2C 515.2701 us] STOP condition
-[I2C 517.1901 us] START condition
-[I2C 537.8101 us] address byte: 3B
-[I2C 563.4451 us] byte transmitted: E5, NACK in response
-[I2C 567.2901 us] START condition
-[I2C 587.9101 us] address byte: 3A
-[I2C 592.9101 us] STOP condition
-[I2C 594.8301 us] START condition
 # run 500us
-[I2C 615.4501 us] address byte: 3B
-[I2C 641.0851 us] byte transmitted: E5, NACK in response
-[I2C 644.9301 us] START condition
-[I2C 665.5501 us] address byte: 3A
-[I2C 670.5501 us] STOP condition
-[I2C 672.4701 us] START condition
-[I2C 693.0901 us] address byte: 3B
-[I2C 718.7251 us] byte transmitted: E5, NACK in response
-[I2C 722.5701 us] START condition
-[I2C 743.1901 us] address byte: 3A
-[I2C 748.1901 us] STOP condition
-[I2C 750.1101 us] START condition
-[I2C 770.7301 us] address byte: 3B
-[I2C 796.3651 us] byte transmitted: E5, NACK in response
-[I2C 800.2101 us] START condition
-[I2C 820.8301 us] address byte: 3A
-[I2C 825.8301 us] STOP condition
-[I2C 827.7501 us] START condition
-[I2C 848.3701 us] address byte: 3B
-[I2C 874.0051 us] byte transmitted: E5, NACK in response
-[I2C 877.8501 us] START condition
-[I2C 898.4701 us] address byte: 3A
-[I2C 903.4701 us] STOP condition
-[I2C 905.3901 us] START condition
-[I2C 926.0101 us] address byte: 3B
-[I2C 951.6451 us] byte transmitted: E5, NACK in response
-[I2C 955.4901 us] START condition
-[I2C 976.1101 us] address byte: 3A
-[I2C 981.1101 us] STOP condition
-[I2C 983.0301 us] START condition
-[I2C 1003.6501 us] address byte: 3B
-[I2C 1029.2851 us] byte transmitted: E5, NACK in response
-[I2C 1033.1301 us] START condition
-[I2C 1053.7501 us] address byte: 3A
-[I2C 1058.7501 us] STOP condition
-[I2C 1060.6701 us] START condition
-[I2C 1081.2901 us] address byte: 3B
+[I2C 1.3101 us] START condition
+[I2C 21.9301 us] address byte: 3A
+[I2C 44.4301 us] byte received: 00
+[I2C 49.4301 us] STOP condition
+[I2C 51.3501 us] START condition
+[I2C 71.9701 us] address byte: 3B
+[I2C 97.6051 us] byte transmitted: E5, NACK in response
+[I2C 101.4301 us] START condition
+[I2C 122.0501 us] address byte: 3A
+[I2C 127.0501 us] STOP condition
+[I2C 128.9701 us] START condition
+[I2C 149.5901 us] address byte: 3B
+[I2C 175.2251 us] byte transmitted: E5, NACK in response
+[I2C 179.0501 us] START condition
+[I2C 199.6701 us] address byte: 3A
+[I2C 204.6701 us] STOP condition
+[I2C 206.5901 us] START condition
+[I2C 227.2101 us] address byte: 3B
+[I2C 252.8451 us] byte transmitted: E5, NACK in response
+[I2C 256.6701 us] START condition
+[I2C 277.2901 us] address byte: 3A
+[I2C 282.2901 us] STOP condition
+[I2C 284.2101 us] START condition
+[I2C 304.8301 us] address byte: 3B
+[I2C 330.4651 us] byte transmitted: E5, NACK in response
+[I2C 334.2901 us] START condition
+[I2C 354.9101 us] address byte: 3A
+[I2C 359.9101 us] STOP condition
+[I2C 361.8301 us] START condition
+[I2C 382.4501 us] address byte: 3B
+[I2C 408.0851 us] byte transmitted: E5, NACK in response
+[I2C 411.9101 us] START condition
+[I2C 432.5301 us] address byte: 3A
+[I2C 437.5301 us] STOP condition
+[I2C 439.4501 us] START condition
+[I2C 460.0701 us] address byte: 3B
+[I2C 485.7051 us] byte transmitted: E5, NACK in response
+[I2C 489.5301 us] START condition
+# run 500us
+[I2C 510.1501 us] address byte: 3A
+[I2C 515.1501 us] STOP condition
+[I2C 517.0701 us] START condition
+[I2C 537.6901 us] address byte: 3B
+[I2C 563.3251 us] byte transmitted: E5, NACK in response
+[I2C 567.1501 us] START condition
+[I2C 587.7701 us] address byte: 3A
+[I2C 592.7701 us] STOP condition
+[I2C 594.6901 us] START condition
+[I2C 615.3101 us] address byte: 3B
+[I2C 640.9451 us] byte transmitted: E5, NACK in response
+[I2C 644.7701 us] START condition
+[I2C 665.3901 us] address byte: 3A
+[I2C 670.3901 us] STOP condition
+[I2C 672.3101 us] START condition
+[I2C 692.9301 us] address byte: 3B
+[I2C 718.5651 us] byte transmitted: E5, NACK in response
+[I2C 722.3901 us] START condition
+[I2C 743.0101 us] address byte: 3A
+[I2C 748.0101 us] STOP condition
+[I2C 749.9301 us] START condition
+[I2C 770.5501 us] address byte: 3B
+[I2C 796.1851 us] byte transmitted: E5, NACK in response
+[I2C 800.0101 us] START condition
+[I2C 820.6301 us] address byte: 3A
+[I2C 825.6301 us] STOP condition
+[I2C 827.5501 us] START condition
+[I2C 848.1701 us] address byte: 3B
+[I2C 873.8051 us] byte transmitted: E5, NACK in response
+[I2C 877.6301 us] START condition
+[I2C 898.2501 us] address byte: 3A
+[I2C 903.2501 us] STOP condition
+[I2C 905.1701 us] START condition
+[I2C 925.7901 us] address byte: 3B
+[I2C 951.4251 us] byte transmitted: E5, NACK in response
+[I2C 955.2501 us] START condition
+[I2C 975.8701 us] address byte: 3A
+[I2C 980.8701 us] STOP condition
+[I2C 982.7901 us] START condition
