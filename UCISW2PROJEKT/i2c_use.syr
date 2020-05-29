@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.39 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.64 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.39 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.64 secs
  
 --> Reading design: i2c_use.prj
 
@@ -105,40 +105,460 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\osad5\Desktop\UCISW2PROJEKT\UCISW2PROJEKT\i2c_use.vf" into library work
-Parsing module <i2c_use>.
-Parsing VHDL file "C:\Users\osad5\Desktop\UCISW2PROJEKT\UCISW2PROJEKT\BlackBox.vhd" into library work
-Parsing entity <BlackBox>.
-Parsing architecture <Behavioral> of entity <blackbox>.
-Parsing VHDL file "C:\Users\osad5\Desktop\I2C_Master\I2C_Master.vhd" into library work
+Parsing VHDL file "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\I2C_Master.vhd" into library work
 Parsing entity <I2C_Master>.
 Parsing architecture <STRUCTURE> of entity <i2c_master>.
+Parsing VHDL file "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\BlackBox.vhd" into library work
+Parsing entity <BlackBox>.
+Parsing architecture <Behavioral> of entity <blackbox>.
+Parsing VHDL file "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\i2c_use.vhf" into library work
+Parsing entity <i2c_use>.
+Parsing architecture <BEHAVIORAL> of entity <i2c_use>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating module <i2c_use>.
-Going to vhdl side to elaborate module BlackBox
+Elaborating entity <i2c_use> (architecture <BEHAVIORAL>) from library <work>.
 
 Elaborating entity <BlackBox> (architecture <Behavioral>) from library <work>.
-ERROR:HDLCompiler:1401 - "C:\Users\osad5\Desktop\UCISW2PROJEKT\UCISW2PROJEKT\BlackBox.vhd" Line 135: Signal ReadCnt[3] in unit BlackBox is connected to following multiple drivers:
-Driver 0: output signal ReadCnt[3] of instance Latch (ReadCnt[3]).
-Driver 1: output signal ReadCnt[3] of instance Multiplexer (GND_4_o_GND_4_o_mux_32).
-Driver 0: output signal ReadCnt[2] of instance Latch (ReadCnt[2]).
-Driver 1: output signal ReadCnt[2] of instance Multiplexer (GND_4_o_GND_4_o_mux_32).
-Driver 0: output signal ReadCnt[1] of instance Latch (ReadCnt[1]).
-Driver 1: output signal ReadCnt[1] of instance Multiplexer (GND_4_o_GND_4_o_mux_32).
-Driver 0: output signal ReadCnt[0] of instance Latch (ReadCnt[0]).
-Driver 1: output signal ReadCnt[0] of instance Multiplexer (GND_4_o_GND_4_o_mux_32).
-Back to verilog to continue elaboration
-Module i2c_use remains a blackbox, due to errors in its contents
-WARNING:HDLCompiler:1499 - "C:\Users\osad5\Desktop\UCISW2PROJEKT\UCISW2PROJEKT\i2c_use.vf" Line 23: Empty module <i2c_use> remains a black box.
+INFO:HDLCompiler:679 - "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\BlackBox.vhd" Line 144. Case statement is complete. others clause is never selected
+
+Elaborating entity <I2C_Master> (architecture <STRUCTURE>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <i2c_use>.
+    Related source file is "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\i2c_use.vhf".
+INFO:Xst:3210 - "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\i2c_use.vhf" line 87: Output port <acc_x> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\i2c_use.vhf" line 87: Output port <acc_y> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\i2c_use.vhf" line 87: Output port <acc_z> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\i2c_use.vhf" line 106: Output port <NACK> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <i2c_use> synthesized.
+
+Synthesizing Unit <BlackBox>.
+    Related source file is "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\BlackBox.vhd".
+WARNING:Xst:647 - Input <FIFO_Empty> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 3-bit register for signal <counter>.
+    Found 16-bit register for signal <acc_x_var>.
+    Found 16-bit register for signal <acc_y_var>.
+    Found 16-bit register for signal <acc_z_var>.
+    Found 8-bit register for signal <sygnal>.
+    Found 3-bit register for signal <state>.
+INFO:Xst:1799 - State reset is never reached in FSM <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <counter[2]_GND_6_o_add_13_OUT> created at line 157.
+WARNING:Xst:737 - Found 1-bit latch for signal <Address<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 3-bit comparator lessequal for signal <counter[2]_PWR_6_o_LessThan_13_o> created at line 156
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <BlackBox> synthesized.
+
+Synthesizing Unit <I2C_Master>.
+    Related source file is "C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT\I2C_Master.vhd".
+    Summary:
+	no macro.
+Unit <I2C_Master> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 3-bit adder                                           : 1
+# Registers                                            : 5
+ 16-bit register                                       : 3
+ 3-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 1
+ 3-bit comparator lessequal                            : 1
+# Multiplexers                                         : 3
+ 16-bit 2-to-1 multiplexer                             : 3
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <BlackBox>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <BlackBox> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 108
+ Flip-Flops                                            : 108
+# Comparators                                          : 1
+ 3-bit comparator lessequal                            : 1
+# Multiplexers                                         : 3
+ 16-bit 2-to-1 multiplexer                             : 3
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <XLXI_1/FSM_0> on signal <state[1:3]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ idle        | 000
+ fifo_push   | 001
+ go_state    | 010
+ busy_state  | 011
+ r_data      | 100
+ reset       | unreached
+ go_state2   | 110
+ busy_state2 | 111
+-------------------------
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    Address_0 in unit <BlackBox>
+
+
+Optimizing unit <i2c_use> ...
+
+Optimizing unit <I2C_Master> ...
+
+Optimizing unit <BlackBox> ...
+WARNING:Xst:2677 - Node <XLXI_1/counter_2> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/counter_1> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/counter_0> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_15> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_14> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_13> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_12> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_11> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_10> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_9> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_8> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_7> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_6> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_5> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_4> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_3> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_2> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_1> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_z_var_0> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_15> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_14> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_13> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_12> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_11> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_10> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_9> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_8> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_7> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_6> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_5> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_4> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_3> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_2> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_1> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_y_var_0> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_15> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_14> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_13> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_12> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_11> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_10> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_9> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_8> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_7> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_6> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_5> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_4> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_3> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_2> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_1> of sequential type is unconnected in block <i2c_use>.
+WARNING:Xst:2677 - Node <XLXI_1/acc_x_var_0> of sequential type is unconnected in block <i2c_use>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block i2c_use, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 63
+ Flip-Flops                                            : 63
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : i2c_use.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 159
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 7
+#      LUT2                        : 16
+#      LUT2_D                      : 1
+#      LUT2_L                      : 3
+#      LUT3                        : 15
+#      LUT3_D                      : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 72
+#      LUT4_D                      : 5
+#      LUT4_L                      : 5
+#      LUT5                        : 1
+#      MUXCY                       : 7
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 64
+#      FDE                         : 29
+#      FDR                         : 15
+#      FDRE                        : 16
+#      FDS                         : 3
+#      LD                          : 1
+# RAMS                             : 8
+#      RAM16X1D                    : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 2
+#      IOBUF                       : 2
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              64  out of  126800     0%  
+ Number of Slice LUTs:                  149  out of  63400     0%  
+    Number used as Logic:               133  out of  63400     0%  
+    Number used as Memory:               16  out of  19000     0%  
+       Number used as RAM:               16
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    163
+   Number with an unused Flip Flop:      99  out of    163    60%  
+   Number with an unused LUT:            14  out of    163     8%  
+   Number of fully used LUT-FF pairs:    50  out of    163    30%  
+   Number of unique control sets:        17
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    210     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+Clk                                | BUFGP                    | 71    |
+XLXI_1/Address_0_G(XLXI_1/Go1:O)   | NONE(*)(XLXI_1/Address_0)| 1     |
+-----------------------------------+--------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.067ns (Maximum Frequency: 245.863MHz)
+   Minimum input arrival time before clock: 2.297ns
+   Maximum output required time after clock: 0.645ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 4.067ns (frequency: 245.863MHz)
+  Total number of paths / destination ports: 1585 / 199
+-------------------------------------------------------------------------
+Delay:               4.067ns (Levels of Logic = 4)
+  Source:            XLXI_2/cntSCL_5 (FF)
+  Destination:       XLXI_2/i_FIFO_iFull (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: XLXI_2/cntSCL_5 to XLXI_2/i_FIFO_iFull
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.361   0.342  XLXI_2/cntSCL_5 (XLXI_2/cntSCL<5>)
+     LUT2:I1->O            2   0.495   0.299  XLXI_2/SDAout_mux000332_SW0 (XLXI_2/N71)
+     LUT4:I3->O           15   0.495   0.360  XLXI_2/sclEnd_cmp_eq00001 (XLXI_2/sclEnd)
+     LUT4:I3->O           13   0.495   0.351  XLXI_2/i_FIFO_DoPush40 (XLXI_2/i_FIFO_DoPush)
+     LUT3:I2->O            1   0.495   0.279  XLXI_2/i_FIFO_iFull_and000096 (XLXI_2/i_FIFO_iFull_and0000)
+     FDRE:CE                   0.095          XLXI_2/i_FIFO_iFull
+    ----------------------------------------
+    Total                      4.067ns (2.436ns logic, 1.631ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 23 / 22
+-------------------------------------------------------------------------
+Offset:              2.297ns (Levels of Logic = 3)
+  Source:            RST (PAD)
+  Destination:       XLXI_2/i_FIFO_iEmpty (FF)
+  Destination Clock: Clk rising
+
+  Data Path: RST to XLXI_2/i_FIFO_iEmpty
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   0.001   0.599  RST_IBUF (RST_IBUF)
+     LUT3:I0->O            1   0.279   0.379  XLXI_2/i_FIFO_DoPush40_SW0 (XLXI_2/N79)
+     LUT4:I2->O            1   0.411   0.279  XLXI_2/i_FIFO_iEmpty_or00001 (XLXI_2/i_FIFO_iEmpty_or0000)
+     FDRE:R                    0.349          XLXI_2/i_FIFO_iEmpty
+    ----------------------------------------
+    Total                      2.297ns (1.040ns logic, 1.257ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 1)
+  Source:            XLXI_2/SCLout (FF)
+  Destination:       SCL (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: XLXI_2/SCLout to SCL
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              2   0.361   0.283  XLXI_2/SCLout (XLXI_2/SCLout_116)
+     IOBUF:T->IO               0.000          XLXI_2/IOB2 (SCL)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+Clk               |    4.067|         |         |         |
+XLXI_1/Address_0_G|         |    1.275|         |         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_1/Address_0_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |         |         |    1.001|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.35 secs
+ 
 --> 
 
-Total memory usage is 4475896 kilobytes
+Total memory usage is 4641916 kilobytes
 
-Number of errors   :    1 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   54 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

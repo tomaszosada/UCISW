@@ -1,0 +1,32 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\Users\kubah\Documents\GitHub\UCISW\UCISW2PROJEKT
+#Date/Time:
+#:T   Thu May 28 15:45:14 2020
+#------------------------------
+	#Reading i2c_use_map.ncd...
+	#Loading device for application Rf_Device from file '7a100t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "i2c_use" is an NCD, version 3.2, device xc7a100t, package csg324, speed -3
+	#Design creation date: 2020.05.28.13.36.54
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+select site 'TIEOFF_X31Y167'
+	#site "TIEOFF_X31Y167",  type = TIEOFF  (RPM grid X124Y334)
+	#4
+unselect -all
+	#5
+unselect -all
+	#6
+unselect -all
+	#7
+unselect -all
+	#8
+unselect -all

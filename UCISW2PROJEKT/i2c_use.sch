@@ -22,12 +22,25 @@
         <signal name="SCL" />
         <signal name="START" />
         <signal name="sygnal(7:0)" />
+        <signal name="acc_x(15:0)" />
+        <signal name="acc_z(15:0)" />
+        <signal name="acc_y(15:0)" />
+        <signal name="XLXN_17" />
+        <signal name="XLXN_18" />
+        <signal name="XLXN_19" />
+        <signal name="XLXN_20" />
+        <signal name="XLXN_21" />
+        <signal name="XLXN_22" />
+        <signal name="XLXN_23" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="Clk" />
         <port polarity="BiDirectional" name="SDA" />
         <port polarity="BiDirectional" name="SCL" />
         <port polarity="Input" name="START" />
         <port polarity="Output" name="sygnal(7:0)" />
+        <port polarity="Output" name="acc_x(15:0)" />
+        <port polarity="Output" name="acc_z(15:0)" />
+        <port polarity="Output" name="acc_y(15:0)" />
         <blockdef name="BlackBox">
             <timestamp>2020-5-19T18:59:14</timestamp>
             <rect width="64" x="416" y="340" height="24" />
@@ -95,9 +108,9 @@
             <blockpin signalname="XLXN_6(3:0)" name="ReadCnt(3:0)" />
             <blockpin signalname="XLXN_7(7:0)" name="FIFO_DI(7:0)" />
             <blockpin signalname="sygnal(7:0)" name="sygnal(7:0)" />
-            <blockpin name="acc_x(15:0)" />
-            <blockpin name="acc_z(15:0)" />
-            <blockpin name="acc_y(15:0)" />
+            <blockpin signalname="acc_x(15:0)" name="acc_x(15:0)" />
+            <blockpin signalname="acc_z(15:0)" name="acc_z(15:0)" />
+            <blockpin signalname="acc_y(15:0)" name="acc_y(15:0)" />
         </block>
         <block symbolname="I2C_Master" name="XLXI_2">
             <blockpin signalname="XLXN_2" name="Go" />
@@ -211,5 +224,24 @@
             <wire x2="704" y1="1152" y2="1344" x1="704" />
         </branch>
         <iomarker fontsize="28" x="704" y="1344" name="sygnal(7:0)" orien="R90" />
+        <branch name="acc_x(15:0)">
+            <wire x2="1456" y1="1216" y2="1232" x1="1456" />
+            <wire x2="1696" y1="1232" y2="1232" x1="1456" />
+            <wire x2="1696" y1="1232" y2="1376" x1="1696" />
+            <wire x2="1776" y1="1376" y2="1376" x1="1696" />
+        </branch>
+        <branch name="acc_z(15:0)">
+            <wire x2="1568" y1="1344" y2="1344" x1="1456" />
+            <wire x2="1568" y1="1344" y2="1456" x1="1568" />
+            <wire x2="1696" y1="1456" y2="1456" x1="1568" />
+        </branch>
+        <branch name="acc_y(15:0)">
+            <wire x2="1552" y1="1408" y2="1408" x1="1456" />
+            <wire x2="1552" y1="1408" y2="1536" x1="1552" />
+            <wire x2="1696" y1="1536" y2="1536" x1="1552" />
+        </branch>
+        <iomarker fontsize="28" x="1696" y="1456" name="acc_z(15:0)" orien="R0" />
+        <iomarker fontsize="28" x="1696" y="1536" name="acc_y(15:0)" orien="R0" />
+        <iomarker fontsize="28" x="1776" y="1376" name="acc_x(15:0)" orien="R0" />
     </sheet>
 </drawing>

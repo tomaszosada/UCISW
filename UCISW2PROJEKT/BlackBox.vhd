@@ -84,7 +84,7 @@ begin
 	--adres a potem dane 
 	--JAKI OUTPUT RATE?
 	--setting data output rate to 50HZ 
-		FIFO_DI <= "00001001";
+	--	FIFO_DI <= "00001001";
 	--data format address 0x31 (data range?)
 	--0x2c data rate address
 	--0x2D turn on Measure (D3) 00001000

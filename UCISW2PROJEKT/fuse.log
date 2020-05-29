@@ -1,12 +1,12 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_isim_beh.exe -prj C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_beh.prj work.i2c_use_i2c_use_sch_tb 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_isim_beh.exe" -prj "C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_beh.prj" "work.i2c_use_i2c_use_sch_tb" 
 ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 8
-Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/I2C_Master.vhd" into library work
-Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/BlackBox.vhd" into library work
-Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.vhf" into library work
-Parsing VHDL file "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/DZIALAJPLIS.vhd" into library work
+Parsing VHDL file "C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/I2C_Master.vhd" into library work
+Parsing VHDL file "C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/BlackBox.vhd" into library work
+Parsing VHDL file "C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/i2c_use.vhf" into library work
+Parsing VHDL file "C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/DZIALAJPLIS.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -47,8 +47,7 @@ Compiling architecture structure of entity I2C_Master [i2c_master_default]
 Compiling architecture behavioral of entity i2c_use [i2c_use_default]
 Compiling architecture behavioral of entity i2c_use_i2c_use_sch_tb
 Time Resolution for simulation is 1ps.
-Waiting for 5 sub-compilation(s) to finish...
 Compiled 189 VHDL Units
-Built simulation executable C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_isim_beh.exe
-Fuse Memory Usage: 64340 KB
-Fuse CPU Usage: 3483 ms
+Built simulation executable C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/i2c_use_i2c_use_sch_tb_isim_beh.exe
+Fuse Memory Usage: 64328 KB
+Fuse CPU Usage: 1203 ms

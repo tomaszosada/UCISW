@@ -1,2 +1,8 @@
 xst -intstyle ise -ifn "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.xst" -ofn "C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.syr" 
 sch2sym -intstyle ise -family artix7 -refsym i2c_use C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.sch C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.sym 
+xst -intstyle ise -ifn "C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/i2c_use.xst" -ofn "C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/i2c_use.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 i2c_use.ngc i2c_use.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o i2c_use_map.ncd i2c_use.ngd i2c_use.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_use_preroute.twx i2c_use_map.ncd -o i2c_use_preroute.twr i2c_use.pcf 
+par -w -intstyle ise -ol high -mt off i2c_use_map.ncd i2c_use.ncd i2c_use.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml i2c_use.twx i2c_use.ncd -o i2c_use.twr i2c_use.pcf 

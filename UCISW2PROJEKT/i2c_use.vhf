@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : i2c_use.vhf
--- /___/   /\     Timestamp : 05/15/2020 14:37:31
+-- /___/   /\     Timestamp : 05/20/2020 13:20:37
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.vhf -w C:/Users/osad5/Desktop/UCISW2PROJEKT/UCISW2PROJEKT/i2c_use.sch
+--Command: sch2hdl -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/i2c_use.vhf -w C:/Users/kubah/Documents/GitHub/UCISW/UCISW2PROJEKT/i2c_use.sch
 --Design Name: i2c_use
 --Device: artix7
 --Purpose:
@@ -59,7 +59,10 @@ architecture BEHAVIORAL of i2c_use is
              Address          : out   std_logic_vector (7 downto 0); 
              ReadCnt          : out   std_logic_vector (3 downto 0); 
              FIFO_DI          : out   std_logic_vector (7 downto 0); 
-             sygnal           : out   std_logic_vector (7 downto 0));
+             sygnal           : out   std_logic_vector (7 downto 0); 
+             acc_x            : out   std_logic_vector (15 downto 0); 
+             acc_z            : out   std_logic_vector (15 downto 0); 
+             acc_y            : out   std_logic_vector (15 downto 0));
    end component;
    
    component I2C_Master
@@ -89,6 +92,9 @@ begin
                 FIFO_Full=>XLXN_11,
                 RST=>RST,
                 START=>START,
+                acc_x=>open,
+                acc_y=>open,
+                acc_z=>open,
                 Address(7 downto 0)=>XLXN_5(7 downto 0),
                 FIFO_DI(7 downto 0)=>XLXN_7(7 downto 0),
                 FIFO_Pop=>XLXN_4,

@@ -1,3 +1,3 @@
+vhdl work "I2C_Master.vhd"
 vhdl work "BlackBox.vhd"
-vhdl work "../../I2C_Master/I2C_Master.vhd"
-verilog work "i2c_use.vf"
+vhdl work "i2c_use.vhf"
